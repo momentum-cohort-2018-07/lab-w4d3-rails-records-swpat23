@@ -5,49 +5,49 @@ class AlbumsController < ApplicationController
   end
 
   def show
-    @albums = Album.find(params[ :id])  
+    @album = Album.find(params[ :id])
   end
 
 
   def new
-    @albums = Album.new
+    @album = Album.new
   end
 
   def edit
-    @albums = Album.find(params[:id])
+    @album = Album.find(params[:id])
   end
 
   def create
-    @albums = Album.new(article_params)
+    @album = Album.new(album_params)
 
-    if @albums.save
-      redirect_to @albums
+    if @album.save
+      redirect_to @album
     else
       render 'new'
     end
   end
 
   def update
-    @albums = Album.find(params[:id])
+    @album = Album.find(params[:id])
 
-    if @albums.update (article_params)
-      redirect_to @albums
+    if @album.update (album_params)
+      redirect_to @album
     else
       render 'edit'
     end
   end
 
   def destroy
-    @albums = Album.find(params[:id])
-    @albums.destroy
+    @album = Album.find(params[:id])
+    @album.destroy
 
     redirect_to albums_path
   end
 
   private
-    def album_params
-      params.require(:albums) .permit(:title, :artist, :year_released)
-    end
+  def album_params
+    params.require(:album) .permit(:title, :artist, :YearReleased)
+  end
 
 end
 
