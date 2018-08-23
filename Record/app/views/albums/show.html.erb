@@ -1,0 +1,23 @@
+<p>
+  <strong>Title:</strong>
+  <%= @album.title %>
+</p>
+ 
+<p>
+  <strong>Artist:</strong>
+  <%= @album.artist %>
+</p>
+
+<p>
+  <strong>YearReleased:</strong>
+  <%= @album.artist %>
+</p>
+
+# <h2>Comments</h2>
+# <% render @article.comments %>
+
+# <h2>Add a comment:</h2>
+# <%= render 'comments/form' %>
+ 
+<%= link_to 'Edit', edit_album_path(@album) %>
+<%= link_to 'Back', albums_path %>
