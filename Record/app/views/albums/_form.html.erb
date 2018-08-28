@@ -1,0 +1,23 @@
+<%= form_with model: @album, local: true do |form| %>
+ 
+ 
+  <p>
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+  </p>
+ 
+  <p>
+    <%= form.label :artist %><br>
+    <%= form.text_field :artist %>
+  </p>
+
+  <p>
+    <%= form.label :YearReleased %><br>
+    <%= form.text_field :YearReleased %>
+  </p>
+ 
+  <p>
+    <%= form.submit %>
+  </p>
+ 
+  <% end %>
